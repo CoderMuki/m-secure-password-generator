@@ -1,0 +1,23 @@
+{
+  "name": "m-secure-password-generator",
+  "version": "1.0.0",
+  "description": "A Simple Password Generator",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoderMuki/m-secure-password-generator.git"
+  },
+  "keywords": [
+    "password-generator"
+  ],
+  "author": "xmukilanx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CoderMuki/m-secure-password-generator/issues"
+  },
+  "homepage": "https://github.com/CoderMuki/m-secure-password-generator#readme"
+}

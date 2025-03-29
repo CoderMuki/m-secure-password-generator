@@ -1,0 +1,1 @@
+export { generatePassword } from "./src/password.js";
