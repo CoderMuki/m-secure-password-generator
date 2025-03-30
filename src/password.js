@@ -5,7 +5,6 @@ if (typeof(window) !== 'undefined') { // https://github.com/CoderMuki/m-secure-p
 var charPools = require('./charPool.js'); // Password Character Pool Generator
 var bytePool = { randomBytes: require('randombytes') } // Get Random Bytes Pool 
 const maxRandomValue = 256;
-var password = '';
 var rIndex;
 var rBytes;
 
@@ -45,6 +44,7 @@ module.exports.generatePassword = function (options) {
     }
     const passwordPool = charPools.getcharacterPool(options); // Password Characters Pool
     var passwordLength = options.length;
+    var password = '';
     for (let x = 0; x < passwordLength; x++) { // Password generated
         password += passwordPool[randomNumber(passwordPool.length)]
     }
