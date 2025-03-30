@@ -1,6 +1,6 @@
 {
   "name": "m-secure-password-generator",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A Simple Password Generator",
   "main": "index.js",
   "types": "src/password.d.ts",

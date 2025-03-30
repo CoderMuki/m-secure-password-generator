@@ -1,3 +1,6 @@
+if (typeof(window) !== 'undefined') {
+	window.global = window.global || window;
+}
 
 var charPools = require('./charPool.js');
 var bytePool = { randomBytes: require('randombytes') }
