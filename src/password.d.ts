@@ -3,6 +3,7 @@ export interface passwordOptions {
     /**
      * Set password length
      * @default 12
+     * @since v1.0.0
      */
     length?: number;
 
@@ -10,6 +11,7 @@ export interface passwordOptions {
     /**
      * Include lowercase alphabets
      * @default true
+     * @since v1.0.0
      */
     lower?: boolean;
 
@@ -17,6 +19,7 @@ export interface passwordOptions {
     /**
      * Include uppercase ALPHABETS
      * @default true
+     * @since v1.0.0
      */
     upper?: boolean;
 
@@ -24,6 +27,7 @@ export interface passwordOptions {
     /**
      * Include Numbers 0-9
      * @default true
+     * @since v1.0.0
      */
     numbr?: boolean;
 
@@ -32,13 +36,15 @@ export interface passwordOptions {
      * Include Special Characters
      * @summary ~!@#$%^&*()-+=<>?
      * @default false
+     * @since v1.0.0
      */
     chars?: boolean;
     
 /*--------Mix Characters--------*/
     /**
      * Mix generated pool of characters 
-     * @default false 
+     * @default false
+     * @since v1.0.0
      */
     mixem?: boolean;
     
@@ -46,6 +52,7 @@ export interface passwordOptions {
     /**
      * Custom charcters to exclude from password
      * @default ""
+     * @since v1.0.0
      */
     avoid?: string;
 }

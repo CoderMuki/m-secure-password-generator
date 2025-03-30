@@ -1,6 +1,6 @@
 {
   "name": "m-secure-password-generator",
-  "version": "1.2.2",
+  "version": "1.3.1",
   "description": "A Simple Password Generator",
   "main": "index.js",
   "types": "src/password.d.ts",
@@ -12,7 +12,11 @@
     "url": "git+https://github.com/CoderMuki/m-secure-password-generator.git"
   },
   "keywords": [
-    "password-generator"
+    "password-generator",
+    "browser",
+    "angular",
+    "passwords",
+    "frontend"
   ],
   "author": "xmukilanx",
   "license": "MIT",
