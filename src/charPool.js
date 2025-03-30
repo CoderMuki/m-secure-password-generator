@@ -1,8 +1,6 @@
-var charpool = '';
-var shuffled = [];
-
 module.exports.getcharacterPool = function (options) {
-    
+    var shuffled = [];
+    var charpool = '';
     /**
      * Character pool selection from options
      */
