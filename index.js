@@ -1,1 +1,1 @@
-export { generatePassword } from "./src/password.js";
+module.exports = require('./src/password')

@@ -1,9 +1,9 @@
 {
   "name": "m-secure-password-generator",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "description": "A Simple Password Generator",
   "main": "index.js",
-  "type": "module",
+  "types": "src/password.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/CoderMuki/m-secure-password-generator/issues"
   },
-  "homepage": "https://github.com/CoderMuki/m-secure-password-generator#readme"
+  "homepage": "https://github.com/CoderMuki/m-secure-password-generator#readme",
+  "dependencies": {
+    "randombytes": "^2.0.5"
+  }
 }
