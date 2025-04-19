@@ -43,22 +43,34 @@ module.exports.generatePassword = function (options) {
     if(!options.lower && !options.upper && !options.numbr && !options.chars) {
         throw new Error('Atleast one input options must be true');
     }
-    const passwordPool = charPools.getcharacterPool(options); // Password Characters Pool
-    var passwordLength = options.length;
-    var password = '';
-    for (let x = 0; x < passwordLength; x++) { // Password generated
-        password += passwordPool[randomNumber(passwordPool.length)]
+    if(options.strct) {
+        var minlength = 1 + options.lower + options.upper + options.numbr + options.chars;
+        if(minlength > options.length) {
+            throw new Error('Password request length must be greater than selected options');
+        }
     }
+    
+    const passwordPool = charPools.getcharacterPool(options); // Password Characters Pool
+    
+    var password = '';
+    password = makePassword(options, passwordPool);
 
+    return password;
+}   
+
+function makePassword(options, pool) { // Function to generate password from options
+    var tempPass = '';
+    for (let x = 0; x < options.length; x++) { // Password generated
+        tempPass += pool[randomNumber(pool.length)]
+    }
     // Strict characters validation
     if(options.strct) {
         var haveall = charPools.strict.strictsCheck.every( check => {
             if(!options[check.type]) {return true};
             // test generated password to include characters from all opted options
-            return check.mustHave.test(password);
+            return check.mustHave.test(tempPass);
         })
-        if(!haveall) return this.generatePassword(options)
+        if(!haveall) return makePassword(options,pool)
     }
-    
-    return password
-}   
+    return tempPass;
+}
