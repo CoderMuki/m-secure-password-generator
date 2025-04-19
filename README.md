@@ -13,6 +13,7 @@ A simple password generator package with support for browsers.
 -   Includes Numbers, Special Characters, Upper and Lowercase Alphabets.
 -   Special option to mix pool of characters for password generation.
 -   Option to exclude specific characters from your passwords.
+-   Option to strictly evaluate password to include atleast one character from each option.
 
 ## How to install?
 
@@ -33,6 +34,7 @@ __All options set to false or password length of zero throws and error__
 | chars                    | Boolean |  Include Special Characters. ~!@#$%^&*()-+=<>?               | false   |
 | mixem                    | Boolean |  Mix generated pool of characters.                           | false   |
 | avoid                    | String  |  Custom charcters to exclude from password. *for eg*: 'm#K!l'| ''      |
+| strct                    | Boolean |  Strict validation - include all opted option's characters   | false   |
 
 
 ## How to use?
@@ -55,12 +57,13 @@ let password = generatePassword({
     numbr : true,
     chars : true,
     mixem : true,
-    avoid : 'm#K!l'
+    avoid : 'm#K!l',
+    strct : true
 })
 
 console.log(password);
 
-Output : RGv4V5B=zvgyL%&
+// Output : 7*?IbV9UXyNqti~
 ```
 
 ## Credits

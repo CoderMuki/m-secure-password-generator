@@ -55,6 +55,14 @@ export interface passwordOptions {
      * @since v1.0.0
      */
     avoid?: string;
+
+/*--------Strict Options--------*/
+    /**
+     * Password must include atleast one charcter from opted options
+     * @default false
+     * @since v1.5.1
+     */
+    strct?: boolean;
 }
 
 /**

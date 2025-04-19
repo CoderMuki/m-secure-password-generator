@@ -36,6 +36,7 @@ module.exports.generatePassword = function (options) {
     if (!Object.prototype.hasOwnProperty.call(options, 'chars')) options.chars = false;
     if (!Object.prototype.hasOwnProperty.call(options, 'mixem')) options.mixem = false;
     if (!Object.prototype.hasOwnProperty.call(options, 'avoid')) options.avoid = '';
+    if (!Object.prototype.hasOwnProperty.call(options, 'strct')) options.strct = false;
     if (!options.length) {
         throw new Error('Password length cannot be 0');
     }
@@ -48,6 +49,16 @@ module.exports.generatePassword = function (options) {
     for (let x = 0; x < passwordLength; x++) { // Password generated
         password += passwordPool[randomNumber(passwordPool.length)]
     }
+
+    // Strict characters validation
+    if(options.strct) {
+        var haveall = charPools.strict.strictsCheck.every( check => {
+            if(!options[check.type]) {return true};
+            // test generated password to include characters from all opted options
+            return check.mustHave.test(password);
+        })
+        if(!haveall) return this.generatePassword(options)
+    }
     
     return password
-}
+}   
