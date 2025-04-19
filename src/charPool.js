@@ -1,10 +1,22 @@
+/**
+ * Strict check exported for password validation to include diverse charcters from pool 
+ */
+const strictsCheck = [
+    { type: 'lower', mustHave: /[a-z]/ },
+    { type: 'upper', mustHave: /[A-Z]/ },
+    { type: 'numbr', mustHave: /[0-9]/ },
+    { type: 'chars', mustHave: /[~!@#$%^&*()-+=<>?]/ }
+];
+
+module.exports.strict = { strictsCheck };
+
 module.exports.getcharacterPool = function (options) {
     var shuffled = [];
     var charpool = '';
     /**
-     * Character pool selection from options
-     */
-    
+    * Character pool selection from options
+    */
+
     const lowercase = 'qwertyuiopasdfghjklzxcvbnm';
     const uppercase = 'QWERTYUIOPASDFGHJKLZXCVBNM';
     const numbers = '7984561230';
