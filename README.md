@@ -14,6 +14,7 @@ A simple password generator package with support for browsers.
 -   Special option to mix pool of characters for password generation.
 -   Option to exclude specific characters from your passwords.
 -   Option to strictly evaluate password to include atleast one character from each option.
+-   Now optimized for performance speeds - range: `0.13ms - 0.54ms`
 
 ## How to install?
 

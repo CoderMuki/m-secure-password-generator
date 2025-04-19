@@ -40,11 +40,8 @@ module.exports.getcharacterPool = function (options) {
     // Removing characters based on user input 
 
     if(options.avoid.length) {
-        const avoid = options.avoid.split('');
-        var removedChars;
-        for (let remove of avoid) {
-            removedChars = charpool?.replace(remove,'');
-            charpool = removedChars
+        for(let x=options.avoid.length; x>0 ; x--) {
+            charpool = charpool?.replace(options.avoid[x-1],'');
         }
     }
 
