@@ -3,7 +3,9 @@ if (typeof(window) !== 'undefined') { // https://github.com/CoderMuki/m-secure-p
 }
 
 var charPools = require('./charPool.js'); // Password Character Pool Generator
-var bytePool = { randomBytes: require('randombytes') } // Get Random Bytes Pool 
+// Dependency removal of RandomBytes generator and added support for both Node.js and Browser environments
+
+var randomBytesVal = require('./randombytes.js'); // Get Random Bytes Function
 const maxRandomValue = 256;
 var rIndex;
 var rBytes;
@@ -11,7 +13,7 @@ var rBytes;
 function getNewRandomVal() { // Get Random value from bytePool
     if (!rIndex || rIndex >= rBytes.length) {
         rIndex = 0;
-        rBytes = bytePool.randomBytes(maxRandomValue);
+        rBytes = randomBytesVal(maxRandomValue);
     }
     var result = rBytes[rIndex];
     rIndex += 1;
