@@ -14,7 +14,10 @@ A simple password generator package with support for browsers.
 -   Special option to mix pool of characters for password generation.
 -   Option to exclude specific characters from your passwords.
 -   Option to strictly evaluate password to include atleast one character from each option.
--   Now optimized for performance speeds - range: `0.13ms - 0.54ms`
+-   Now optimized for performance speeds - range: `0.04ms - 0.34ms`.
+-   Newly optimized for Webpack5 with zero package dependency.
+-   Self generated randombytes using latest `Web Crypto`.
+-   Supports both NodeJS and Browser environments.
 
 ## How to install?
 
